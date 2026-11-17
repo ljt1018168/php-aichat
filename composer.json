@@ -1,0 +1,39 @@
+{
+    "name": "tonyliu/php-aichat",
+    "description": "框架无关的 AI 对话查询业务数据模块：Agent 循环 + Function Calling 工具流水线 + 权限/脱敏/审计/限流；核心仅依赖 PDO 与 PSR-16/PSR-3，附 ThinkPHP/Laravel 适配器",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["ai", "chat", "llm", "function-calling", "agent", "thinkphp", "laravel", "psr-16", "psr-3"],
+    "authors": [
+        {
+            "name": "tonyliu"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-curl": "*",
+        "ext-mbstring": "*",
+        "ext-pdo": "*",
+        "psr/simple-cache": "^1.0 || ^2.0",
+        "psr/log": "^1.1 || ^2.0 || ^3.0"
+    },
+    "suggest": {
+        "topthink/framework": "^6.0（使用 ThinkPHP 适配器时需要）",
+        "topthink/think-view": "^1.0（ThinkPHP 适配器面板页可选）",
+        "illuminate/support": "^8.0 || ^9.0 || ^10.0 || ^11.0（使用 Laravel 适配器时需要）"
+    },
+    "autoload": {
+        "psr-4": {
+            "aichat\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "examples\\": "examples/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
